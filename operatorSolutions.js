@@ -37,3 +37,31 @@ console.log(Array.isArray([1, 2, 3]));
 console.log(5 > 10);
 console.log(null === undefined);
 console.log(NaN === NaN);
+
+// number 5
+
+// i. 4 > 3 is true
+// ii. 4 >= 3 is true
+// iii. 4 < 3 is false
+// iv. 4 <= 3 is false
+// v. 4 == 4 is true
+// vi. 4 === 4 is true
+// vii. 4 != 4 is false
+// viii. 4 !== 4 is false
+// ix. 4 != '4' is false
+// x. 4 == '4' is true
+// xi. 4 === '4' is false
+// xii. "python".length > "jargon".length is false
+
+console.log(4 > 3);
+console.log(4 >= 3);
+console.log(4 < 3);
+console.log(4 <= 3);
+console.log(4 == 4);
+console.log(4 === 4);
+console.log(4 != 4);
+console.log(4 !== 4);
+console.log(4 != "4");
+console.log(4 == "4");
+console.log(4 === "4");
+console.log("python".length > "jargon".length);
