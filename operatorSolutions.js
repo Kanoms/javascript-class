@@ -26,3 +26,14 @@ console.log(typeof num);
 // number 3
 let numTwo = 9.8;
 console.log(parseInt(numTwo)); // 9 not 10
+
+// number 4
+// true statements
+console.log(2 + 2 === 4);
+console.log(typeof "Hello" === "string");
+console.log(Array.isArray([1, 2, 3]));
+
+// false statements
+console.log(5 > 10);
+console.log(null === undefined);
+console.log(NaN === NaN);
