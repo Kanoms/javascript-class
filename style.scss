@@ -1,0 +1,22 @@
+@import "./components/colour";
+@import "./components/reset";
+@import "./components/typography";
+@import "./components/mediaqueries";
+
+body {
+  margin: 0;
+  padding: 2rem;
+  @include kflex;
+  flex-direction: column;
+
+  div {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+
+    h2 {
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap");
+
+@mixin kflex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  .calculation {
+    div {
+      button {
+        font-family: "DM Sans", sans-serif;
+        font-size: 20px;
+      }
+    }
+
+    #result {
+      font-size: 16px;
+      font-family: "Poppins", sans-serif;
+    }
+  }
+}
