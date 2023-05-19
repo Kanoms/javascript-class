@@ -185,7 +185,7 @@ console.log("The season is:", season);
 
 // 3
 function checkDay() {
-  day = prompt("Enter a day:").toLowerCase();
+  let day = prompt("Enter a day:").toLowerCase();
   const resultElement = document.getElementById("result6");
 
   if (
@@ -217,4 +217,57 @@ if (
   console.log(`${day} is a weekend`);
 } else {
   console.log("Invalid day");
+}
+
+// Level 3
+function daysInMonths() {
+  let thisMonth = prompt("Enter a month:").toLowerCase();
+  const resultElement = document.getElementById("result7");
+
+  if (
+    thisMonth === "september" ||
+    thisMonth === "april" ||
+    thisMonth === "june" ||
+    thisMonth === "november"
+  ) {
+    resultElement.textContent = `${thisMonth} has 30 days`;
+  } else if (
+    thisMonth === "january" ||
+    thisMonth === "march" ||
+    thisMonth === "may" ||
+    thisMonth === "july" ||
+    thisMonth === "august" ||
+    thisMonth === "october" ||
+    thisMonth === "december"
+  ) {
+    resultElement.textContent = `${thisMonth} has 31 days`;
+  } else if (thisMonth === "february") {
+    resultElement.textContent = `${thisMonth} has 28 days`;
+  } else {
+    resultElement.textContent = `${thisMonth} is not valid`;
+  }
+}
+
+thisMonth = "april";
+if (
+  thisMonth === "september" ||
+  thisMonth === "april" ||
+  thisMonth === "june" ||
+  thisMonth === "november"
+) {
+  console.log(`${thisMonth} has 30 days`);
+} else if (
+  thisMonth === "january" ||
+  thisMonth === "march" ||
+  thisMonth === "may" ||
+  thisMonth === "july" ||
+  thisMonth === "august" ||
+  thisMonth === "october" ||
+  thisMonth === "december"
+) {
+  console.log(`${thisMonth} has 31 days`);
+} else if (thisMonth === "february") {
+  console.log(`${thisMonth} has 28 days`);
+} else {
+  console.log(`${thisMonth} is not valid`);
 }
