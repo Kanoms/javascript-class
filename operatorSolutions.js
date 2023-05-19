@@ -40,28 +40,52 @@ console.log(NaN === NaN);
 
 // number 5
 
-// i. 4 > 3 is true
-// ii. 4 >= 3 is true
-// iii. 4 < 3 is false
-// iv. 4 <= 3 is false
-// v. 4 == 4 is true
-// vi. 4 === 4 is true
-// vii. 4 != 4 is false
-// viii. 4 !== 4 is false
-// ix. 4 != '4' is false
-// x. 4 == '4' is true
-// xi. 4 === '4' is false
-// xii. "python".length > "jargon".length is false
+const check = 4 > 3; // true
+const check2 = 4 >= 3; // true
+const check3 = 4 < 3; // false
+const check4 = 4 <= 3; // false
+const check5 = 4 == 4; // true
+const check6 = 4 === 4; // true
+const check7 = 4 != 4; // false
+const check8 = 4 !== 4; // false
+const check9 = 4 != "4"; // false
+const check10 = 4 == "4"; // true
+const check11 = 4 === "4"; // false
+const check12 = "python".length > "jargon".length; // false
 
-console.log(4 > 3);
-console.log(4 >= 3);
-console.log(4 < 3);
-console.log(4 <= 3);
-console.log(4 == 4);
-console.log(4 === 4);
-console.log(4 != 4);
-console.log(4 !== 4);
-console.log(4 != "4");
-console.log(4 == "4");
-console.log(4 === "4");
-console.log("python".length > "jargon".length);
+console.log(check);
+console.log(check2);
+console.log(check3);
+console.log(check4);
+console.log(check5);
+console.log(check6);
+console.log(check7);
+console.log(check8);
+console.log(check9);
+console.log(check10);
+console.log(check11);
+console.log(check12);
+
+// number 6
+
+const check13 = 4 > 3 && 10 < 12; // true
+const check14 = 4 > 3 && 10 > 12; // false
+const check15 = 4 > 3 || 10 < 12; // true
+const check16 = 4 > 3 || 10 > 12; // true
+const check17 = !(4 > 3); // false
+const check18 = !(4 < 3); // true
+const check19 = !false; // true
+const check20 = !(4 > 3 && 10 < 12); // false
+const check21 = !(4 > 3 && 10 > 12); // true
+const check22 = !(4 === "4"); // true
+
+console.log(check13);
+console.log(check14);
+console.log(check15);
+console.log(check16);
+console.log(check17);
+console.log(check18);
+console.log(check19);
+console.log(check20);
+console.log(check21);
+console.log(check22);
