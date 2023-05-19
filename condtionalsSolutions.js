@@ -4,15 +4,11 @@ function checkAge() {
   const yourAge = parseInt(prompt("Enter your age"));
   const resultElement = document.getElementById("result");
 
-  if (!isNaN(yourAge)) {
-    if (yourAge >= 18) {
-      resultElement.textContent = "You are old enough to drive.";
-    } else {
-      const yearsToWait = 18 - yourAge;
-      resultElement.textContent = `You are left with ${yearsToWait} years to drive.`;
-    }
+  if (yourAge >= 18) {
+    resultElement.textContent = "You are old enough to drive.";
   } else {
-    resultElement.textContent = "Please enter a valid birth year.";
+    const yearsToWait = 18 - yourAge;
+    resultElement.textContent = `You are left with ${yearsToWait} years to drive.`;
   }
 }
 
@@ -36,22 +32,23 @@ if (yourAge >= 18) {
 
 const myAge = parseInt(26);
 
-function checkAge() {
-  const yourAge = parseInt(prompt("Enter your age"));
+function checkAge2() {
+  const myAge = parseInt(26);
+  let yourAge2 = parseInt(prompt("Enter your age"));
   const resultElement = document.getElementById("result2");
+  let ageGap = yourAge2 - myAge;
+  let ageGap2 = myAge - yourAge2;
 
-  if (!isNaN(yourAge)) {
-    if (yourAge > myAge) {
-      let ageGap = yourAge - myAge;
+  if (!isNaN(yourAge2)) {
+    if (yourAge2 > myAge) {
       resultElement.textContent = `You are ${ageGap} years older than me.`;
-    } else if ((yourAge = myAge)) {
+    } else if (yourAge2 - myAge === 0) {
       resultElement.textContent = "We are the same age";
     } else {
-      let ageGap2 = myAge - yourAge;
       resultElement.textContent = `You are ${ageGap2} years younger than me.`;
     }
   } else {
-    resultElement.textContent = "Please enter a valid birth year.";
+    resultElement.textContent = "Please enter a valid age.";
   }
 }
 
@@ -168,9 +165,16 @@ function checkSeason(month) {
   } else {
     return "Invalid month";
   }
+}
+
+function checkSeasonOnClick() {
   const userInput = prompt("Enter a month:");
+
   const season = checkSeason(userInput);
   console.log("The season is:", season);
+
+  const resultElement = document.getElementById("result5");
+  resultElement.innerHTML = "The season is: " + season;
 }
 
 // Prompt the user for input
@@ -180,8 +184,9 @@ const season = checkSeason(userInput);
 console.log("The season is:", season);
 
 // 3
-function checkDay(day) {
-  day = day.toLowerCase();
+function checkDay() {
+  day = prompt("Enter a day:").toLowerCase();
+  const resultElement = document.getElementById("result6");
 
   if (
     day === "monday" ||
@@ -190,14 +195,12 @@ function checkDay(day) {
     day === "thursday" ||
     day === "friday"
   ) {
-    return `${day} is a working day`;
+    resultElement.textContent = `${day} is a working day`;
   } else if (day === "sunday" || month === "saturday") {
-    return `${day} is a weekend`;
+    resultElement.textContent = `${day} is a weekend`;
   } else {
-    return "Invalid day";
+    resultElement.textContent = "Invalid day";
   }
-  const userInput2 = prompt("Enter a day:");
-  const thisDay = checkSeason(userInput2);
 }
 
 day = "monday";
