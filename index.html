@@ -8,12 +8,115 @@
     <title>Document</title>
   </head>
   <body>
-    <form action="GET">
-      <label for="">succes call</label>
-      <button type="submit" onclick="alertUser(event)">submit</button>
-    </form>
+    <h1>Level 2</h1>
+    <div class="no1">
+      <h2>Triangle Area Calculator</h2>
+      <img
+        src="https://d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/area-of-a-triangle-1615858257.png"
+        alt="area of Triangle"
+      />
+
+      <button type="button" onclick="calculateArea()">Calculate Area</button>
+
+      <div id="result"></div>
+    </div>
+
+    <div>
+      <h2>Triangle Perimeter Calculator</h2>
+      <img
+        src="https://4.bp.blogspot.com/-Au2tM_p_XVQ/T_2NDAUqWlI/AAAAAAAAArU/paw0JR1gzyI/s1600/Perimeter-of-a-Triangle.jpg"
+        alt="Perimeter of Triangle"
+      />
+
+      <button type="button" onclick="calculatePerimeter()">
+        Calculate Perimeter
+      </button>
+
+      <div id="result2"></div>
+    </div>
+
+    <div>
+      <h2>Rectangle Area & Perimeter Calculator</h2>
+
+      <img
+        src="https://www.piday.org/wp-content/uploads/2020/03/Area-2048x1062.png"
+        alt="Rectangle"
+      />
+
+      <button type="button" onclick="calculateRectAreaPeri()">
+        Calculate Area & Perimeter
+      </button>
+
+      <div id="result3"></div>
+    </div>
+
+    <div>
+      <h2>Circle Area & Circumference Calculator</h2>
+
+      <img
+        src="https://res.cloudinary.com/duxfzk6uy/image/upload/v1684501018/Kanoms/circle-area-perimeter-formulas_xwnt7y.png"
+        alt="area and circumference of circle"
+      />
+
+      <button type="button" onclick="calculateCircle()">
+        Calculate Area & Circumference
+      </button>
+
+      <div id="result4"></div>
+    </div>
+
+    <div>
+      <h2>Calculate the slope, x-intercept, and y-intercept of y = 2x - 2</h2>
+
+      <button type="button" onclick="calculateSlopeOne()">
+        Calculate Slope
+      </button>
+
+      <div id="result5"></div>
+    </div>
+
+    <div>
+      <h2>Calculate the slope between point (2, 2) and point (6, 10)</h2>
+
+      <button type="button" onclick="calculateSlopeTwo()">
+        Calculate Slope
+      </button>
+
+      <div id="result6"></div>
+    </div>
+
+    <div>
+      <h2>
+        Calculate the value of y = x^2 + 6x + 9 for different x values to find
+        when y is 0
+      </h2>
+
+      <button type="button" onclick="calculateEquation()">Calculate</button>
+
+      <div id="result7"></div>
+    </div>
+
+    <div>
+      <h2>Calcuate Pay</h2>
+
+      <button type="button" onclick="calculatePay()">Calculate Pay</button>
+
+      <div id="result8"></div>
+    </div>
+
+    <div>
+      <h2>Driving Age Checker</h2>
+      <button onclick="checkAge()">Check Age</button>
+      <p id="result9"></p>
+    </div>
+
+    <div>
+      <h2>Seconds Lived</h2>
+      <button onclick="calSecondsLived()">Check Age</button>
+      <div id="result10"></div>
+    </div>
     <!-- SCRIPT  -->
-    <script src="/main.js"></script>
+    <script src="/operatorSolutions.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   </body>
 </html>
