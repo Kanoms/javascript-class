@@ -353,6 +353,7 @@ if (birthYear !== null) {
 function calSecondsLived() {
   let yearsLived = parseInt(prompt("Enter number of years you live"));
   const secondsInYear = 365 * 24 * 60 * 60;
+  const totalSeconds = yearsLived * secondsInYear;
 
   if (yearsLived !== null) {
     const totalSeconds = yearsLived * secondsInYear;
