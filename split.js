@@ -1,5 +1,6 @@
 // split(): The split method splits a string at a specified place.
 let string = "PluralCode Javascript February Cohort Class";
+console.log(string);
 console.log(string.split()); // [ 'PluralCode Javascript February Cohort Class' ]
 console.log(string.split(" ")); // [ 'PluralCode', 'Javascript', 'February', 'Cohort', 'Class' ]
 let firstName = "Julius Adebowale";
