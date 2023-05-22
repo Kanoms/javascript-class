@@ -2022,13 +2022,20 @@ countries.forEach((country) => {
   name.classList.add("card__name");
   name.textContent = country.name;
 
-  let countryFlag = document.createElement("img");
+  let flag = document.createElement("img");
+  flag.classList.add("card__img");
+  flag.src = country.flag;
+  flag.alt = country.name + " flag";
+
+  let capital = document.createElement("p");
+  capital.classList.add("card__capital");
+  capital.textContent = country.capital;
 
   let language = document.createElement("p");
   language.classList.add("card__language");
   language.textContent = country.languages;
 
-  let population = document.createElement("span");
+  let population = document.createElement("p");
   population.classList.add("card__population");
   population.textContent = country.population;
 
@@ -2036,22 +2043,24 @@ countries.forEach((country) => {
   currency.classList.add("card__currency");
   currency.textContent = country.currency;
 
-  card.append(name);
   cardContainer.appendChild(card);
 
-  card.append(language);
+  cardContainer.appendChild(capital);
+  capital.innerHTML = "<strong>Capital:</strong>" + " " + country.capital;
+
   cardContainer.appendChild(language);
   language.innerHTML =
     "<strong>Languages:</strong>" + " " + country.languages.join(", ");
 
-  card.append(currency);
   cardContainer.appendChild(currency);
   currency.innerHTML = "<strong>Currency:</strong>" + " " + country.currency;
 
-  card.append(population);
   cardContainer.appendChild(population);
   population.innerHTML =
     "<strong>Currency:</strong>" + " " + country.population.toLocaleString();
+
+  card.append(name, flag, capital, language, currency, population);
+  cardContainer.appendChild(card);
 });
 
 // const container = document.querySelector(".card-container");
