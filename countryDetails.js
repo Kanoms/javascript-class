@@ -2057,7 +2057,7 @@ countries.forEach((country) => {
 
   cardContainer.appendChild(population);
   population.innerHTML =
-    "<strong>Currency:</strong>" + " " + country.population.toLocaleString();
+    "<strong>Population:</strong>" + " " + country.population.toLocaleString();
 
   card.append(name, flag, capital, language, currency, population);
   cardContainer.appendChild(card);
