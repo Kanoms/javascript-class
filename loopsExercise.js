@@ -24,6 +24,7 @@ const webTechs = [
 
 const mernStack = ["MongoDB", "Express", "React", "Node"];
 
+// Loop 1
 // 1
 // for loop
 for (let a = 0; a <= 10; a++) {
@@ -182,7 +183,7 @@ console.log(randomNumbers);
 const randomNumbers2 = [];
 
 while (randomNumbers2.length < 5) {
-  const randomNumber = Math.floor(Math.random() * 100); // Generates a random number between 0 and 99
+  const randomNumber = Math.floor(Math.random() * 100);
 
   if (!randomNumbers2.includes(randomNumber)) {
     randomNumbers2.push(randomNumber);
@@ -193,11 +194,10 @@ console.log(randomNumbers2);
 
 // 15
 function generateRandomId() {
-  const characters =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  const characters = "5j2khz";
   let randomId = "";
 
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < characters.length; i++) {
     const randomIndex = Math.floor(Math.random() * characters.length);
     randomId += characters[randomIndex];
   }
@@ -207,3 +207,237 @@ function generateRandomId() {
 
 const randomId = generateRandomId();
 console.log(randomId);
+
+// Level 2
+// 1
+function generateRandomId2() {
+  const characters = "fe3jo1gl124g";
+  let randomId2 = "";
+
+  for (let i = 0; i < characters.length; i++) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    randomId2 += characters[randomIndex];
+  }
+
+  return randomId2;
+}
+
+const randomId2 = generateRandomId2();
+console.log(randomId2);
+
+function generateRandomId3() {
+  const characters = "xkqci4utda1lmbelpkm03rba";
+  let randomId3 = "";
+
+  for (let i = 0; i < characters.length; i++) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    randomId3 += characters[randomIndex];
+  }
+
+  return randomId3;
+}
+
+const randomId3 = generateRandomId3();
+console.log(randomId3);
+
+// 2
+function generateRandomHexadecimal() {
+  const characters = "0123456789ABCDEF";
+  let randomHex = "#";
+
+  for (let i = 0; i < 6; i++) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    randomHex += characters[randomIndex];
+  }
+
+  return randomHex;
+}
+
+const randomHexadecimal = generateRandomHexadecimal();
+console.log(randomHexadecimal);
+
+// 3
+function generateRandomRgbColor() {
+  let rgbColor = "rgb(";
+
+  for (let i = 0; i < 3; i++) {
+    const component = Math.floor(Math.random() * 256);
+    rgbColor += component;
+
+    if (i < 2) {
+      rgbColor += ", ";
+    }
+  }
+
+  rgbColor += ")";
+
+  return rgbColor;
+}
+
+const randomRgbColor = generateRandomRgbColor();
+console.log(randomRgbColor);
+
+// 4
+const newArr = [];
+for (let i = 0; i < countries.length; i++) {
+  newArr.push(countries[i].toUpperCase());
+}
+
+console.log(newArr);
+
+// 5
+const newArr2 = [];
+for (let i = 0; i < countries.length; i++) {
+  newArr2.push(countries[i].length);
+}
+
+console.log(newArr2);
+
+// 6
+const formattedCountries = [];
+
+for (let i = 0; i < countries.length; i++) {
+  const country = countries[i];
+  const abbreviation = country.slice(0, 3).toUpperCase();
+  const length = country.length;
+
+  formattedCountries.push([country, abbreviation, length]);
+}
+
+console.log(formattedCountries);
+
+// 7
+const countriesWithLand = [];
+
+for (let i = 0; i < countries.length; i++) {
+  const country = countries[i];
+
+  if (country.includes("land")) {
+    countriesWithLand.push(country);
+  }
+}
+
+if (countriesWithLand.length > 0) {
+  console.log(countriesWithLand);
+} else {
+  console.log("All these countries are without land");
+}
+
+// 8
+const countriesEndsWithIA = [];
+
+for (let i = 0; i < countries.length; i++) {
+  const country = countries[i];
+
+  if (country.endsWith("ia")) {
+    countriesEndsWithIA.push(country);
+  }
+}
+
+if (countriesEndsWithIA.length > 0) {
+  console.log(countriesEndsWithIA);
+} else {
+  console.log("These are countries without 'ia' at the end");
+}
+
+// 9
+let longestCountry = "";
+
+for (let i = 0; i < countries.length; i++) {
+  const country = countries[i];
+
+  if (country.length > longestCountry.length) {
+    longestCountry = country;
+  }
+}
+
+console.log(`${longestCountry}`);
+
+// 10
+const countriesWithFiveCharacters = [];
+
+for (let i = 0; i < countries.length; i++) {
+  const country = countries[i];
+
+  if (country.length === 5) {
+    countriesWithFiveCharacters.push(country);
+  }
+}
+
+if (countriesWithFiveCharacters.length > 0) {
+  console.log(countriesWithFiveCharacters);
+} else {
+  console.log("No countries with exactly 5 characters found.");
+}
+
+// 11
+let longestInWebTechs = "";
+
+for (let i = 0; i < webTechs.length; i++) {
+  const webTech = webTechs[i];
+
+  if (webTech.length > longestInWebTechs.length) {
+    longestInWebTechs = webTech;
+  }
+}
+
+console.log(`${longestInWebTechs}`);
+
+// 12
+const formattedWebTechs = [];
+
+for (let i = 0; i < webTechs.length; i++) {
+  const webTech = webTechs[i];
+  const webLength = webTech.length;
+
+  formattedWebTechs.push([webTech, webLength]);
+}
+
+console.log(formattedWebTechs);
+
+// 13
+const mernAcronym = [];
+
+for (let i = 0; i < mernStack.length; i++) {
+  const mern = mernStack[i];
+  const abbreviation = mern.slice(0, 1).toUpperCase();
+
+  mernAcronym.push(abbreviation);
+}
+
+console.log(mernAcronym);
+
+let acronym = "";
+
+for (let i = 0; i < mernStack.length; i++) {
+  acronym += mernStack[i][0];
+}
+
+console.log(acronym);
+
+// 14
+for (let i = 0; i < webTechs.length; i++) {
+  console.log(webTechs[i]);
+}
+
+for (const webTech of webTechs) {
+  console.log(webTech);
+}
+
+// 15
+let fruits = ["banana", "orange", "mango", "lemon"];
+for (let i = fruits.length - 1; i >= 0; i--) {
+  console.log(fruits[i]);
+}
+
+// 16
+const fullStack = [
+  ["HTML", "CSS", "JS", "React"],
+  ["Node", "Express", "MongoDB"],
+];
+
+for (let i = 0; i < fullStack.length; i++) {
+  for (let j = 0; j < fullStack[i].length; j++) {
+    console.log(fullStack[i][j]);
+  }
+}
